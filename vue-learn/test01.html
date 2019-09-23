@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>我是罗诗溪</title>
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <p>
+        Ask a yes/no question:
+        <input v-model="question">
+      </p>
+      <p>{{answer}}</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@0.12.0/dist/axios.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.13.1/lodash.min.js"></script>
+    <script>
+      let watch_vm = new Vue({
+        el: '#app',
+        data: {
+          question: '',
+          answer: 'I cannot give you an answer until you ask a question!',
+        },
+        watch: {
+          // 如果question 改变，这个函数就会执行
+          question: function(newQuestion, oldQuestion) {
+            this.answer = 'Waiting for you to stop typing...',
+            this.debouncedGetAnswer();
+          }
+        },
+        created: function() {
+          // _.debounce 是一个通过Lodash 限制操作频率的函数
+          this.debouncedGetAnswer = _.debounce(this.getAnswer, 500);
+        },
+        methods: {
+          getAnswer: function() {
+            if (this.question.indexOf('?') === -1) {
+              this.answer = 'Questions usually contain a question mark. ;-)'
+              return;
+            }
+            this.answer = 'Thinking...';
+            let vm = this;
+            axios.get('https:/yesno.wtf/api')
+              .then(function(res) {
+                vm.answer = _.capitalize(res.data.answer)
+              })
+              .catch(err => {
+                vm.answer = "Error" + err;
+              });
+          }
+        }
+      })
+    </script>
+  </body>
+</html>
