@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Vue 组件测试实例</title>
+    <script src="https://cdn.staticfile.org/vue/2.2.2/vue.min.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <cmps></cmps>
+    </div>
+    <script>
+      let Child = {
+        template: '<h1>自定义组件!</h1>'
+      };
+      // 创建根实例
+      new Vue({
+        el: '#app',
+        components: {
+          cmps: Child,
+        }
+      });
+    </script>
+  </body>
+</html>
