@@ -1,0 +1,131 @@
+*{margin: 0; padding: 0;list-style: none;}
+body{
+    background: url(../assets/image/home01.jpg);
+    background-size: 100%;
+}
+.container{
+    width: 1200px;
+    height: 800px;
+    margin: 0 auto;
+}
+/* 导航 */
+.navigation{
+    margin-top: 10px;
+    height: 50px;
+    line-height: 50px;
+}
+.navigation ul li{
+    float: right;
+    font-size: 15px;
+}
+.navigation ul li a{
+    text-decoration: none;
+    color: #09406b;
+    padding: 15px 30px;
+}
+.navigation ul li a:hover{
+    border: 1px solid white;
+    border-radius: 5%;
+    color: black;
+}
+/* 主题内容 */
+.main{
+    width: 1200px;
+    height: 600px;
+    background-color: #bcedff;
+}
+.sideleft{
+    width: 460px;
+    height: 250px;
+    float: left;
+    padding: 85px 130px;
+    background-color: #c8cccf;
+}
+.sideleft p{
+    padding: 8px 0;
+    font-size: 16px;
+}
+.sideright{
+    width: 480px;
+    height: 450px;
+    float: right;
+    background-color: #82898f
+}
+.sideright .index{
+    width: 330px;
+    height: 350px;
+    background-color: #d5d7d8;
+    margin: 90px;
+}
+.index img{
+    display: flex;
+    width: 50px;
+    height: 50px;
+}
+input[type="text"],
+input[type="submit"]{
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    display: block;
+    margin: 0 auto;
+    font-size: 15px;
+    width: 240px;
+}
+input[type="text"]{
+    height: 35px;
+    border-radius: 3px;
+    border: 1px solid #c8cccf;
+    color: #6a6f77;
+    outline: 0;
+}
+input[type="submit"]{
+    margin-top: 25px;
+    height: 35px;
+    background: #357eb8;
+    color: #bcedff;
+    font-weight: bold;
+    font-size: 16px;
+}
+input[type="submit"]:hover{
+    background: #02121f;
+    cursor: pointer;
+}
+.instyle{
+    margin: 5px 0px 5px 46px;
+    font-size: 17px;
+    color: #09406b;
+    background-color: aquamarine;
+}
+.cbstyle{
+    display: block;
+    background-color: antiquewhite;
+    float: left;
+    margin-left: 48px;
+    font-size: 15px;
+}
+.cstyle{
+    display: block;
+    float: right;
+    margin-right: 48px;
+    font-size: 15px;
+    background-color: #bcedff;
+}
+.cstyle a{
+    text-decoration: none;
+}
+.footer{
+    width: 1000px;
+    margin: 60px auto;
+}
+.footer ul{
+    margin-left: 100px;
+}
+.footer ul li{
+    float: left;
+}
+.footer ul li a{
+    text-decoration: none;
+    color: black;
+    border-left: 2px solid black;
+    padding: 0 10px;
+}

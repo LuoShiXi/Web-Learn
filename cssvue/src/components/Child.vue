@@ -1,5 +1,54 @@
 <template>
-  <button @click="tofather">传值</button>
+  <div class="container">
+    <button @click="tofather">传值</button>
+    <!-- 导航栏 -->
+    <div class="navigation">
+        <ul>
+            <li><a href="#">链接1</a></li>
+            <li><a href="#">链接2</a></li>
+            <li><a href="#">链接3</a></li>
+            <li><a href="#">链接4</a></li>
+            <li><a href="#">链接5</a></li>
+            <li><a href="#">链接6</a></li>
+        </ul>
+    </div>
+    <!-- 主体内容 -->
+    <div class="main">
+        <!-- 左边信息栏 -->
+        <div class="sideleft">
+            <h1>Hello World</h1>
+            <h3>HHH WWW</h3>
+            <p>我的第一个web项目，你相信吗？！</p>
+            <p>反正我信了，哈哈哈</p>
+        </div>
+        <!-- 右侧登录界面 -->
+        <div class="sideright">
+            <div class="index">
+                <img src="../assets/image/loginqrcode.png">
+                <form action="#" method="GET">
+                    <p class="instyle">用户名：</p>
+                    <input type="text" value="请输入您的账号或手机号">
+                    <p class="instyle">密码：</p>
+                    <input type="text" value="请输入密码">
+                    <input type="submit" value="登录" name="login">
+                    <br>
+                    <p class="cbstyle"><input type="checkbox" name="rempas"> 记住密码</p>
+                    <p class="cstyle">忘记密码</p>
+                    <br><br>
+                    <p class="cstyle">没有账号？<a href="register.html">立即注册</a></p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- 底部设置 -->
+    <div class="footer">
+        <ul>
+            <li><a href="#">关于我们</a></li>
+            <li><a href="#">版权所有</a></li>
+            <li><a href="#">上海市长宁区凌空SOHO</a></li>
+        </ul>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -15,6 +64,6 @@ export default {
 }
 </script>
 
-<style>
-
+<style lang="scss" scoped>
+  @import "../style/child.scss"
 </style>

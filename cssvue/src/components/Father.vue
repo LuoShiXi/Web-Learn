@@ -21,8 +21,8 @@ export default {
   methods: {
     toFather (msg) {
       console.log(msg);
-      alert(msg);
       this.message = msg;
+      alert(msg);
     }
   }
 };
