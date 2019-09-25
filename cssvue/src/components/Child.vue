@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <button @click="tofather">传值</button>
     <!-- 导航栏 -->
     <div class="navigation">
         <ul>
@@ -30,7 +29,10 @@
                     <input type="text" value="请输入您的账号或手机号">
                     <p class="instyle">密码：</p>
                     <input type="text" value="请输入密码">
-                    <input type="submit" value="登录" name="login">
+                    <!-- <input type="submit" value="登录" name="login"> -->
+                    <router-link to='hello'>
+                      <button @click="tofather" class="test-one">登录</button>
+                    </router-link>
                     <br>
                     <p class="cbstyle"><input type="checkbox" name="rempas"> 记住密码</p>
                     <p class="cstyle">忘记密码</p>
@@ -58,7 +60,8 @@ export default {
     tofather () {
       // 通过$emit进行触发
       // 第一个参数为父组件监听的事件名，后续参数为传递给父组件的方法的参数
-      this.$emit('tofather', 'data');
+      this.$emit('tofather', '登陆成功');
+      // this.$router.push({path: '/hello'});
     }
   }
 }

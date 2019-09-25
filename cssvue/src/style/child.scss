@@ -78,17 +78,18 @@ input[type="text"]{
     color: #6a6f77;
     outline: 0;
 }
-input[type="submit"]{
-    margin-top: 25px;
-    height: 35px;
-    background: #357eb8;
-    color: #bcedff;
-    font-weight: bold;
-    font-size: 16px;
+.index button{
+  // margin-top: 10px;
+  height: 30px;
+  width: 240px;
+  background: #357eb8;
+  color: #bcedff;
+  font-weight: bold;
+  font-size: 16px;
 }
-input[type="submit"]:hover{
-    background: #02121f;
-    cursor: pointer;
+.index button:hover{
+  background: #101011;
+  cursor: pointer;
 }
 .instyle{
     margin: 5px 0px 5px 46px;

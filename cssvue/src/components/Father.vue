@@ -1,7 +1,7 @@
 <template>
   <div id="father">
     <!-- 监听child的toFather时间 -->
-    <h1>{{message}}</h1>
+    <!-- <h1>{{message}}</h1> -->
     <child @tofather="toFather"></child>
   </div>
 </template>
