@@ -23,5 +23,6 @@ export default {
 $background: #CCC;
 body {
   background: $background;
+  text-align: center;
 }
 </style>
