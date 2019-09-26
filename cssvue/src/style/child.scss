@@ -1,8 +1,9 @@
 *{margin: 0; padding: 0;list-style: none;}
+$background: url('../assets/image/home01.jpg');
 .container{
-    width: 1200px;
-    height: 800px;
-    margin: 0 auto;
+    background: $background;
+    background-size: 200%;
+    margin: 0;
 }
 /* 导航 */
 .navigation{
@@ -29,6 +30,7 @@
     width: 1200px;
     height: 600px;
     background-color: #bcedff;
+    margin-left: 10%;
 }
 .sideleft{
     width: 460px;
@@ -51,7 +53,7 @@
     width: 330px;
     height: 350px;
     background-color: #d5d7d8;
-    margin: 90px;
+    margin: 20px 50px;
 }
 .index img{
     display: flex;
@@ -111,7 +113,7 @@ input[type="text"]{
 }
 .footer{
     width: 1000px;
-    margin: 60px auto;
+    margin: 50px auto;
 }
 .footer ul{
     margin-left: 100px;

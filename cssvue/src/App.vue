@@ -12,10 +12,7 @@ export default {
 </script>
 
 <style lang="scss">
-$background: url(./assets/image/home01.jpg);
 #app {
-  margin-top: 50px;
-  background: $background;
-  background-size: 200%;
+  margin: 0px;
 }
 </style>

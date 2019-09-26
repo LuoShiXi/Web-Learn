@@ -31,7 +31,7 @@
                       <p class="instyle">密码：</p>
                       <input type="text" value="请输入密码">
                       <!-- <input type="submit" value="登录" name="login"> -->
-                      <router-link to='hello'>
+                      <router-link to='first'>
                         <button @click="tofather" class="test-one">登录</button>
                       </router-link>
                       <br>
