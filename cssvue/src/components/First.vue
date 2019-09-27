@@ -1,15 +1,17 @@
 <template>
   <body>
-    <div class="first" @dragover="onDragOver($event)" @drop="onDrop($event)">
+    <div class="first">
       <h1>第一个界面</h1>
     </div>
     <br>
     <br>
     <div class="parent">
-      <span id="dragspan" draggable="true" @dragstart="onDragStart($event)">
+      <div id="dragspan" draggable="true" @dragstart="onDragStart($event)">
         draggable-span
-      </span>
-      <span id="dropzone"> dropzone </span>
+      </div>
+      <div id="dropzone" @dragover="onDragOver($event)" @drop="onDrop($event)">
+        dropzone
+      </div>
     </div>
   </body>
 </template>
