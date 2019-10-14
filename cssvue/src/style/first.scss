@@ -9,14 +9,22 @@
   background-color: aliceblue;
 }
 #dragspan{
+  margin-top: 0%;
   margin-left: 0%;
   background-color: rgb(173, 131, 80);
   width: 200px;
   height: 20px;
 }
 #dropzone{
+  margin-top: 0%;
   margin-right: 0%;
   background-color: aqua;
+  width: 200px;
+  height: 20px;
+}
+#drop3{
+  margin-top: 0%;
+  background-color: rgb(165, 192, 192);
   width: 200px;
   height: 20px;
 }

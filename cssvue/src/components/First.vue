@@ -5,12 +5,15 @@
     </div>
     <br>
     <br>
-    <div class="parent">
+    <div class="parent" @dragover="onDragOver($event)" @drop="onDrop($event)">
       <div id="dragspan" draggable="true" @dragstart="onDragStart($event)">
         draggable-span
       </div>
-      <div id="dropzone" @dragover="onDragOver($event)" @drop="onDrop($event)">
+      <div id="dropzone" draggable="true" @dragstart="onDragStart($event)">
         dropzone
+      </div>
+      <div id="drop3" draggable="true" @dragstart="onDragStart($event)">
+        drop3
       </div>
     </div>
   </body>
@@ -29,11 +32,6 @@ export default {
       event
         .dataTransfer
         .setData('text/plain', event.target.id);
-
-      event
-        .currentTarget
-        .style
-        .backgroundColor = 'yellow';
     },
     onDragOver (event) {
       event.preventDefault();
