@@ -6,15 +6,17 @@
     <br>
     <br>
     <div class="parent" @dragover="onDragOver($event)" @drop="onDrop($event)">
-      <div id="dragspan" draggable="true" @dragstart="onDragStart($event)">
+      <div id="dragspan" draggable="true" @dragstart="onDragStart($event)" @dragend="dragend">
         draggable-span
       </div>
-      <div id="dropzone" draggable="true" @dragstart="onDragStart($event)">
+      <div id="dropzone" draggable="true" @dragstart="onDragStart($event)" @dragend="dragend">
         dropzone
       </div>
-      <div id="drop3" draggable="true" @dragstart="onDragStart($event)">
+      <!-- <div id="drop3" draggable="true" @dragstart="onDragStart($event)">
         drop3
-      </div>
+      </div> -->
+    </div>
+    <div class="child" @dragover="onDragOver($event)" @drop="onDrop($event)">
     </div>
   </body>
 </template>
@@ -42,6 +44,10 @@ export default {
       const draggableElement = document.getElementById(id);
       const dropzone = event.target;
       dropzone.appendChild(draggableElement);
+      event.dataTransfer.clearData();
+    },
+    dragend (event) {
+      console.log('dragend', event);
       event.dataTransfer.clearData();
     }
   }
