@@ -22,11 +22,14 @@
 </template>
 
 <script>
+
 export default {
   name: 'First',
   data () {
     return {
-      msg: 'Welcome to Your Vue.js App'
+      msg: 'Welcome to Your Vue.js App',
+      username: '',
+      password: ''
     }
   },
   methods: {

@@ -24,21 +24,23 @@
           <!-- 右侧登录界面 -->
           <div class="sideright">
               <div class="index">
-                  <img src="../assets/image/loginqrcode.png">
+                  <div class="lqrcode">
+                    <img src="../assets/image/loginqrcode.png">
+                  </div>
                   <form action="#" method="GET">
                       <p class="instyle">用户名：</p>
-                      <input type="text" value="请输入您的账号或手机号">
+                      <input type="text" placeholder="请输入您的账号或手机号" v-model="username">
                       <p class="instyle">密码：</p>
-                      <input type="text" value="请输入密码">
+                      <input type="text" placeholder="请输入6位密码">
                       <!-- <input type="submit" value="登录" name="login"> -->
                       <router-link to='first'>
-                        <button @click="tofather" class="test-one">登录</button>
+                        <button @click="tofather(); loginok()" class="test-one">登录</button>
                       </router-link>
                       <br>
                       <p class="cbstyle"><input type="checkbox" name="rempas"> 记住密码</p>
                       <p class="cstyle">忘记密码</p>
                       <br><br>
-                      <p class="cstyle">没有账号？<a href="register.html">立即注册</a></p>
+                      <p class="cstyle">没有账号？<a href="index.html">立即注册</a></p>
                   </form>
               </div>
           </div>
@@ -58,12 +60,20 @@
 <script>
 export default {
   name: 'Child',
+  data () {
+    return {
+      username: '123'
+    }
+  },
   methods: {
     tofather () {
       // 通过$emit进行触发
       // 第一个参数为父组件监听的事件名，后续参数为传递给父组件的方法的参数
       this.$emit('tofather', '登陆成功');
       // this.$router.push({path: '/hello'});
+    },
+    loginok () {
+      this.$emit('loginok', this.username);
     }
   }
 }

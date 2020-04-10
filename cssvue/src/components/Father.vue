@@ -1,8 +1,8 @@
 <template>
   <div id="father">
     <!-- 监听child的toFather时间 -->
-    <!-- <h1>{{message}}</h1> -->
-    <child @tofather="toFather"></child>
+    <h1>{{message}}</h1>
+    <child @tofather="toFather" @loginok="loginOk"></child>
   </div>
 </template>
 
@@ -15,7 +15,9 @@ export default {
   },
   data () {
     return {
-      message: '123'
+      message: '95XILUO',
+      username: '',
+      password: ''
     }
   },
   methods: {
@@ -23,6 +25,10 @@ export default {
       console.log(msg);
       this.message = msg;
       alert(msg);
+    },
+    loginOk (username) {
+      console.log(username);
+      this.username = username;
     }
   }
 };
